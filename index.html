@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="position-fixed top-50 end-0 translate-middle-y" style="z-index: 11">
+      <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Success</strong>
+          <small>Just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Added to basket!
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav justify-content-end top-bar-nav">
+        <li class="nav-item top-bar-nav-link">
+            <span class="top-bar-nav-link">Buy awesome, official geek merchandise!</span>
+        </li>
+        <li class="nav-item top-bar-nav-link">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+        <li class="nav-item top-bar-nav-link">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item top-bar-nav-link">
+          <a class="nav-link" href="#">Wishlist (0)</a>
+        </li>
+    </ul>
+    <div class="container-fluid logo-banner">
+        <img src="https://www.seekpng.com/png/detail/191-1913030_upgraded-mario-jumping-by-nintega-super-mario.png" class="img-thumbnail" alt="mario-jump" style="
+        height: 6rem;
+    ">
+        <img src="./imgs/merchoid.png" class="img-thumbnail" alt="merchoid-logo">
+        <img src="./imgs/mario-logo.png" class="img-thumbnail" alt="merchoid-logo" style="height: 6rem;">
+        <ul class="nav justify-content-end login-cart">
+            <li class="nav-item brd-none">
+                <a class="nav-link black-txt" href="#">LOGIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link black-txt" href="#">CART / £<span id="cartValue">0.00</span></a>
+            </li>
+        </ul>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      SHOP BY CATEGORY
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                      <li><a class="dropdown-item" href="#">Category 1</a></li>
+                      <li><a class="dropdown-item" href="#">Category 2</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Alternate Categories</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="gamingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        GAMING
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="gamingDropdown">
+                        <li><a class="dropdown-item" href="#">Game 1</a></li>
+                        <li><a class="dropdown-item" href="#">Game 2</a></li>
+                        <li><a class="dropdown-item" href="#">Game 3</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Alternate Games</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="moviesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    MOVIES & TV
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="moviesDropdown">
+                    <li><a class="dropdown-item" href="#">Movie 1</a></li>
+                    <li><a class="dropdown-item" href="#">Movie 2</a></li>
+                    <li><a class="dropdown-item" href="#">Movie 3</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Alternate Movies</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="comicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    COMICS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="comicsDropdown">
+                    <li><a class="dropdown-item" href="#">Comic 1</a></li>
+                    <li><a class="dropdown-item" href="#">Comic 2</a></li>
+                    <li><a class="dropdown-item" href="#">Comic 3</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Alternate Comics</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BESTSELLERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">NEW</a>
+              </li>
+            </ul>
+            <form class="d-flex search-bar">
+              <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-7"></div>
+            <div class="col text-center merchandise-banner">
+                <img src="./imgs/mario-logo.png" class="img-thumbnail" alt="merchoid-logo" style="height: 2rem;">
+                <span>GENUINE SUPER MARIO BROS. MERCHANDISE</span>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-7 text-center align-self-center">
+            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./imgs/tshirt-front.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imgs/tshirt-back.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="col text-center align-self-start">
+            <div class="row">
+                <div class="container product-info-container">
+                    <div class="row text-start">
+                        <span class="product-title">Super Mario:</span>
+                    </div>
+                    <div class="row text-start">
+                        <span class="product-sub-title">8bit Scene T-Shirt</span>
+                    </div>
+                    <div class="row text-start">
+                        <span style="font-size: x-small;">As low as <span class="product-price">£0.01</span></span>
+                    </div>
+                    <div class="row text-start">
+                        <span class="delivery-price">Price includes free delivery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container product-info-container">
+                    <div class="row text-start">
+                        <span class="product-description">Grey Super Mario 8bit scene printed on front and back (same screen) with bright red accent Mario</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container product-info-container">
+                    <select class="form-select" aria-label="select size">
+                        <option selected>Small</option>
+                        <option value="1">Medium</option>
+                        <option value="2">Large</option>
+                        <option value="3">X-Large</option>
+                    </select>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button" value="0.01" onclick="addToBasket(this.value)">£0.01 - Add to basket</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
